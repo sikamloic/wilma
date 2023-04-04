@@ -11,5 +11,9 @@ import { IonicModule } from '@ionic/angular';
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
 
+  changeIcon(tabButton: any, iconName: string) {
+    tabButton.src = iconName;
+  }
+
   constructor() {}
 }

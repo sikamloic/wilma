@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true" color="primary">
+  <div class="">
+    <div class="flex justify-between items-center px-5">
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon slot="icon-only" src="assets/Back.svg"></ion-icon>
+      </ion-button>
+      <ion-text class="font-semibold text-lg">Details</ion-text>
+      <button class="visible"></button>
+    </div>
+    <div class="px-5 my-5">
+      <ion-row class="space-x-2 flex justify-between items-center">
+        <ion-col size="3.5" class="border-[1px] rounded-2xl border-white flex justify-center items-center space-x-1">
+          <ion-icon src="assets/Sort List.svg"></ion-icon>
+          <ion-text>Trier par</ion-text>
+        </ion-col>
+        <ion-col size="3.5" class="border-[1px] rounded-2xl border-white flex justify-center items-center space-x-1">
+          <ion-icon src="assets/Maps.svg"></ion-icon>
+          <ion-text>Localisation</ion-text>
+        </ion-col>
+        <ion-col size="3.5" class="border-[1px] rounded-2xl border-white flex justify-center items-center space-x-1">
+          <ion-icon src="assets/Category.svg"></ion-icon>
+          <ion-text>Categorie</ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="bg-[#cecece] grid grid-cols-2 gap-4 p-5">
+      <div class="border-[1px] border-white rounded-lg" *ngFor="let item of items" routerLink="/detail">
+        <ion-img [src]="item" class="h-32 w-fu"></ion-img>
+        <div class="p-2 bg-white">
+          <div class="text-gray-600 mb-2">Moteur</div>
+          <div class="flex justify-between items-center">
+            <div class="flex items-center">
+              <ion-avatar>
+                <img src="assets/avatar2.svg" alt="" class="w-10">
+              </ion-avatar>
+              <ion-text class="text-gray-600 text-sm">Tradly</ion-text>
+            </div>
+            <ion-text color="primary" class="text-sm">1000 F</ion-text>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
